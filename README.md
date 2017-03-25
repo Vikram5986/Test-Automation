@@ -1,2 +1,2 @@
 # Test-Automation
-Learning Git Hub
+Demo of Test Automation project
