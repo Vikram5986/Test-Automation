@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count = "2" parallel="tests">
+ <test name = "Test" >
+ <parameter name="Browser" value="Firefox" />
+ <classes>
+  <class name="com.TestCases.TC_01_Add_Event"/>
+ <class name="com.TestCases.TC_04_Update_Event"/> 
+  <class name="com.TestCases.TC_05_Delete_Event"/>  
+ </classes>
+ </test>
+ 
+<test name="Test2">
+<parameter name="Browser" value="Chrome" />
+ <classes>
+  <class name="com.TestCases.TC_01_Add_Event"/>
+ <class name="com.TestCases.TC_04_Update_Event"/> 
+  <class name="com.TestCases.TC_05_Delete_Event"/> 
+</classes>
+</test>
+</suite>
+
