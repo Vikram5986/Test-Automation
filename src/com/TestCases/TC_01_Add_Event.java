@@ -75,12 +75,7 @@ public class TC_01_Add_Event
 		ops.OpenEventsURL();
 		driver.manage().window().maximize();
 		wait = new WebDriverWait(driver,30);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// Initialize Extent Reports. 
-		report = new ExtentReports("C:\\Users\\Admin\\workspace\\Events\\Execution Reports\\Extent Report\\TC_01_Add_Event.html", true);
-		extent = report.startTest("Add Event", "To check the functionality of adding event");
-		
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 		
 	}
 	@Test(priority = 0, groups = "test", description = "Adding event")
@@ -105,7 +100,7 @@ public class TC_01_Add_Event
 				try 
 				{
 					 String heading = driver.findElement(By.xpath(pro.getProperty("events.heading.xpath"))).getText();
-					 if(heading.equalsIgnoreCase("Events Manager Pag"))
+					 if(heading.equalsIgnoreCase("Events Manager Page"))
 					 {
 						 extent.log(LogStatus.PASS, "Heading is present = " +heading);
 						 System.out.println("Heading is present = " +heading);
@@ -214,8 +209,7 @@ public class TC_01_Add_Event
 	{
 		
 			report.endTest(extent);
-			report.flush();
-			driver.quit();
+			
 	}
 
 }
